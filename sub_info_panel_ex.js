@@ -40,7 +40,7 @@ Sub_info = script-name=Sub_info,update-interval=600
     for (var item in info){
         str +=item+":"+info[item]+"\n";
     }
-  let content = str;
+  let content = ['hello'];
 
   if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
