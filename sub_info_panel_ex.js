@@ -38,7 +38,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   //let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
     var str="";
     for (var item in info){
-        str +=item+":"+obj[item]+"\n";
+        str +=item+":"+info[item]+"\n";
     }
   let content = str;
 
