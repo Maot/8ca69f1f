@@ -32,16 +32,11 @@ Sub_info = script-name=Sub_info,update-interval=600
   if (!info) $done();
   let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
 
-  let used = info.download + info.upload;
+//  let used = info.download + info.upload;
+  let used = info.download;
   let total = info.total;
   let expire = args.expire || info.expire;
-  //let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
-  var str="";
-  for (var item in info) {
-    str +=item+":"+info[item]+"\n";
-  }
-  let content = [`用量：${str} `];
-
+  let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
   if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
   }
